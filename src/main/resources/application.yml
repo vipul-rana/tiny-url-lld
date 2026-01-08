@@ -1,0 +1,27 @@
+servlet:
+  context-path: /api/tiny/
+
+spring:
+  cloud:
+    zookeeper:
+      config:
+        enabled: false
+
+  error:
+    include-stacktrace: always
+  application:
+    name:
+      tiny-url-system-design
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tinyurl
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 50
+      minimum-idle: 10
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+tiny-base-url : http://localhost:8080/
